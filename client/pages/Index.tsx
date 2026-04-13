@@ -82,6 +82,8 @@ const memoryCaptions = [
   'Memory 6',
 ];
 
+const assetBase = import.meta.env.BASE_URL;
+
 export default function Index() {
   const [showIntro, setShowIntro] = useState(true);
   const [showTypewriter, setShowTypewriter] = useState(false);
@@ -320,7 +322,7 @@ export default function Index() {
                   }}
                   muted={videoMuted}
                 >
-                  <source src="/static/video/love.mp4" type="video/mp4" />
+                  <source src={`${assetBase}static/video/love.mp4`} type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
 
@@ -403,7 +405,7 @@ export default function Index() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {[1, 2, 3, 4, 5, 6].map((i) => {
-  const imageSrc = `/static/images/memory-${i}.jpeg`;
+    const imageSrc = `${assetBase}static/images/memory-${i}.jpeg`;
   const caption = memoryCaptions[i - 1] ?? `Memory ${i}`;
   return (
     <div

@@ -79,7 +79,7 @@ export function MusicToggle() {
         loop
         preload="none"
       >
-        <source src="/static/audio/ambient-love.mp3" type="audio/mpeg" />
+        <source src={`${import.meta.env.BASE_URL}static/audio/ambient-love.mp3`} type="audio/mpeg" />
         Your browser does not support the audio element.
       </audio>
 
