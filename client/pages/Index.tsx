@@ -410,7 +410,7 @@ export default function Index() {
             </h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {[1, 2, 3, 4, 5, 6].map((i) => {
+              {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map((i) => {
     const imageSrc = `${assetBase}static/images/memory-${i}.jpeg`;
   const caption = memoryCaptions[i - 1] ?? `Memory ${i}`;
   return (
