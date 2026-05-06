@@ -80,6 +80,10 @@ const memoryCaptions = [
   'Memory 4',
   'Memory 5',
   'Memory 6',
+  'Memory 7',
+  'Memory 8',
+  'Memory 9',
+  'Memory 10',
 ];
 
 const assetBase = import.meta.env.BASE_URL;
