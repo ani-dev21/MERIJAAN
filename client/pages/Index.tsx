@@ -408,7 +408,7 @@ export default function Index() {
             </h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {[1, 2, 3, 4, 5, 6].map((i) => {
+              {[1, 2, 3, 4, 5, 6, 7, 8 ,9 ,10].map((i) => {
     const imageSrc = `${assetBase}static/images/memory-${i}.jpeg`;
   const caption = memoryCaptions[i - 1] ?? `Memory ${i}`;
   return (
@@ -454,6 +454,7 @@ export default function Index() {
               {[
                 { date: '14 Feb 2026', title: 'The Beginning', description: 'Our love story started' },
                 { date: '14 March 2026', title: 'One Month Milestone', description: 'Celebrating our first month together' },
+                { date: '14 April 2026', title: 'Two Month Milestone', description: 'Celebrating our Two  months together and our first official DATE ' },
                 {
                   date: 'Forever',
                   title: 'The Future',
