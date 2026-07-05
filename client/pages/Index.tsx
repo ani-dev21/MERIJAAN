@@ -457,10 +457,21 @@ export default function Index() {
                 { date: '14 Feb 2026', title: 'The Beginning', description: 'Our love story started' },
                 { date: '14 March 2026', title: 'One Month Milestone', description: 'Celebrating our first month together' },
                 { 
-  date: '14 April 2026',
-  title: 'Two Month Milestone',
-  description: 'Celebrating our Two months together and our first official DATE'
-},
+                  date: '14 April 2026',
+                  title: 'Two Month Milestone',
+                   description: 'Celebrating our Two months together and our first official DATE'
+                },  
+                { 
+                  date: '14 MAY 2026',
+                  title: 'Three Month Milestone',
+                  description: 'Celebrating our Three months together '
+                },
+                { 
+                  date: '14 JUNE 2026',
+                  title: 'Four Month Milestone',
+                  description: 'Celebrating our Three months together '
+                },
+      
                 {
                   date: 'Forever',
                   title: 'The Future',
