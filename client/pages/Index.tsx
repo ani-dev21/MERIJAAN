@@ -454,29 +454,21 @@ export default function Index() {
 
             <div className="space-y-8">
               {[
-                { date: '14 Feb 2026', title: 'The Beginning', description: 'Our love story started' },
-                { date: '14 March 2026', title: 'One Month Milestone', description: 'Celebrating our first month together' },
-                { 
-                  date: '14 April 2026',
-                  title: 'Two Month Milestone',
-                   description: 'Celebrating our Two months together and our first official DATE'
-                },  
-                { 
-                  date: '14 MAY 2026',
-                  title: 'Three Month Milestone',
-                  description: 'Celebrating our Three months together '
-                },
-                { 
-                  date: '14 JUNE 2026',
-                  title: 'Four Month Milestone',
-                  description: 'Celebrating our Three months together '
-                },
-      
-                {
-                  date: 'Forever',
-                  title: 'The Future',
-                  description: 'Our endless adventure awaits us',
-                },
+               { date: '14 Feb 2026', title: 'The Beginning', description: 'Our love story started' },
+              { date: '14 March 2026', title: 'One Month Milestone', description: 'Celebrating our first month together' },
+              { date: '14 April 2026', title: 'Two Month Milestone', description: 'Celebrating our Two months together and our first official DATE'},
+              { date: '14 May 2026', title: 'Three Month Milestone', description: 'Celebrating our Three months together' },
+              { date: '14 June 2026', title: 'Four Month Milestone', description: 'Celebrating our Four months together' },
+              { date: '14 July 2026', title: 'Five Month Milestone', description: 'YAYYYY LESSS GOOOO' },
+              { date: '14 August 2026', title: 'Six Month Milestone', description: 'hmm    TU kaafi hai re mere lie' },
+  {
+    date: '14 September 2026',
+    title: 'Seven Month Milestone',
+    description: 'I felt something shift in me but lets see it i love u lubna',
+  },
+  { date: '14 October 2026', title: 'Eight Month Milestone', description: 'I feel like i have been replaced :)' },
+  { date: 'Forever', title: 'The Future', description: 'Our endless adventure awaits us' },
+];
               ].map((milestone, idx) => (
                 <div key={idx} className="timeline-card flex gap-6 md:gap-8 animate-slide-up" data-parallax style={{ animationDelay: `${idx * 0.1}s` }}>
                   <div className="flex flex-col items-center">
