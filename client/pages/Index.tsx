@@ -73,6 +73,7 @@ You are my habit, my home, my heart.
 
 I am yours… completely, quietly, endlessly true,
 And if I have a forever… I want all of it with you. 💗`;
+
 const memoryCaptions = [
   'Memory 1',
   'Memory 2',
@@ -86,6 +87,19 @@ const memoryCaptions = [
   'Memory 10',
   'Memory 11',
   'Memory 12',
+];
+
+const milestones = [
+  { date: '14 Feb 2026', title: 'The Beginning', description: 'Our love story started' },
+  { date: '14 March 2026', title: 'One Month Milestone', description: 'Celebrating our first month together' },
+  { date: '14 April 2026', title: 'Two Month Milestone', description: 'Celebrating our Two months together and our first official DATE' },
+  { date: '14 May 2026', title: 'Three Month Milestone', description: 'Celebrating our Three months together' },
+  { date: '14 June 2026', title: 'Four Month Milestone', description: 'Celebrating our Four months together' },
+  { date: '14 July 2026', title: 'Five Month Milestone', description: 'YAYYYY LESSS GOOOO' },
+  { date: '14 August 2026', title: 'Six Month Milestone', description: 'hmm    TU kaafi hai re mere lie' },
+  { date: '14 September 2026', title: 'Seven Month Milestone', description: 'I felt something shift in me but lets see it i love u lubna' },
+  { date: '14 October 2026', title: 'Eight Month Milestone', description: 'I feel like i have been replaced :)' },
+  { date: 'Forever', title: 'The Future', description: 'Our endless adventure awaits us' },
 ];
 
 const assetBase = import.meta.env.BASE_URL;
@@ -360,25 +374,25 @@ export default function Index() {
                     </button>
 
                     <div className="flex-1">
-  <input
-    type="range"
-    min={0}
-    max={100}
-    step={0.1}
-    value={videoDuration ? (videoCurrentTime / videoDuration) * 100 : 0}
-    onMouseDown={() => setIsSeeking(true)}
-    onMouseUp={(event) => {
-      setIsSeeking(false);
-      handleSeek(Number((event.target as HTMLInputElement).value));
-    }}
-    onChange={(event) => handleSeek(Number(event.target.value))}
-    className="w-full h-1 bg-white/30 rounded-full cursor-pointer hover:bg-white/50 accent-white"
-  />
-</div>
+                      <input
+                        type="range"
+                        min={0}
+                        max={100}
+                        step={0.1}
+                        value={videoDuration ? (videoCurrentTime / videoDuration) * 100 : 0}
+                        onMouseDown={() => setIsSeeking(true)}
+                        onMouseUp={(event) => {
+                          setIsSeeking(false);
+                          handleSeek(Number((event.target as HTMLInputElement).value));
+                        }}
+                        onChange={(event) => handleSeek(Number(event.target.value))}
+                        className="w-full h-1 bg-white/30 rounded-full cursor-pointer hover:bg-white/50 accent-white"
+                      />
+                    </div>
 
-<span className="text-xs text-white/70 min-w-[5rem] text-right">
-  {formatTime(videoCurrentTime)} / {formatTime(videoDuration)}
-</span>
+                    <span className="text-xs text-white/70 min-w-[5rem] text-right">
+                      {formatTime(videoCurrentTime)} / {formatTime(videoDuration)}
+                    </span>
 
                     <button
                       onClick={toggleMute}
@@ -411,32 +425,32 @@ export default function Index() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map((i) => {
-    const imageSrc = `${assetBase}static/images/memory-${i}.jpeg`;
-  const caption = memoryCaptions[i - 1] ?? `Memory ${i}`;
-  return (
-    <div
-      key={i}
-      className="group relative rounded-2xl overflow-hidden aspect-square glassmorphism
-        hover:scale-105 transition-all duration-300 cursor-pointer glow-pink"
-      onClick={() => {
-        setActiveImage(imageSrc);
-        setActiveCaption(caption);
-      }}
-    >
-      <div className="absolute inset-0">
-        <img
-          src={imageSrc}
-          alt={`Memory ${i}`}
-          className="w-full h-full object-cover"
-        />
-      </div>
-      <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-      <p className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-        {caption}
-      </p>
-    </div>
-  );
-})}
+                const imageSrc = `${assetBase}static/images/memory-${i}.jpeg`;
+                const caption = memoryCaptions[i - 1] ?? `Memory ${i}`;
+                return (
+                  <div
+                    key={i}
+                    className="group relative rounded-2xl overflow-hidden aspect-square glassmorphism
+                      hover:scale-105 transition-all duration-300 cursor-pointer glow-pink"
+                    onClick={() => {
+                      setActiveImage(imageSrc);
+                      setActiveCaption(caption);
+                    }}
+                  >
+                    <div className="absolute inset-0">
+                      <img
+                        src={imageSrc}
+                        alt={`Memory ${i}`}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                    <p className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      {caption}
+                    </p>
+                  </div>
+                );
+              })}
             </div>
 
             <p className="text-center text-foreground/60 mt-8 text-sm">
@@ -453,27 +467,18 @@ export default function Index() {
             </h2>
 
             <div className="space-y-8">
-              {[
-               { date: '14 Feb 2026', title: 'The Beginning', description: 'Our love story started' },
-              { date: '14 March 2026', title: 'One Month Milestone', description: 'Celebrating our first month together' },
-              { date: '14 April 2026', title: 'Two Month Milestone', description: 'Celebrating our Two months together and our first official DATE'},
-              { date: '14 May 2026', title: 'Three Month Milestone', description: 'Celebrating our Three months together' },
-              { date: '14 June 2026', title: 'Four Month Milestone', description: 'Celebrating our Four months together' },
-              { date: '14 July 2026', title: 'Five Month Milestone', description: 'YAYYYY LESSS GOOOO' },
-              { date: '14 August 2026', title: 'Six Month Milestone', description: 'hmm    TU kaafi hai re mere lie' },
-  {
-    date: '14 September 2026',
-    title: 'Seven Month Milestone',
-    description: 'I felt something shift in me but lets see it i love u lubna',
-  },
-  { date: '14 October 2026', title: 'Eight Month Milestone', description: 'I feel like i have been replaced :)' },
-  { date: 'Forever', title: 'The Future', description: 'Our endless adventure awaits us' },
-];
-              ].map((milestone, idx) => (
-                <div key={idx} className="timeline-card flex gap-6 md:gap-8 animate-slide-up" data-parallax style={{ animationDelay: `${idx * 0.1}s` }}>
+              {milestones.map((milestone, idx) => (
+                <div
+                  key={idx}
+                  className="timeline-card flex gap-6 md:gap-8 animate-slide-up"
+                  data-parallax
+                  style={{ animationDelay: `${idx * 0.1}s` }}
+                >
                   <div className="flex flex-col items-center">
                     <div className="w-4 h-4 rounded-full bg-primary border-4 border-background" />
-                    {idx < 2 && <div className="w-1 h-20 bg-gradient-to-b from-primary to-transparent" />}
+                    {idx < milestones.length - 1 && (
+                      <div className="w-1 h-20 bg-gradient-to-b from-primary to-transparent" />
+                    )}
                   </div>
 
                   <div className="pb-8">
@@ -510,23 +515,23 @@ export default function Index() {
       </div>
 
       {activeImage && (
-  <div
-    className="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center"
-    onClick={() => setActiveImage(null)}
-  >
-    <div className="flex flex-col items-center gap-4">
-      <img
-        src={activeImage}
-        alt={activeCaption || 'Full memory'}
-        className="max-w-[92vw] max-h-[82vh] rounded-2xl shadow-2xl"
-      />
-      {activeCaption && (
-        <p className="text-white/80 text-sm tracking-wide">{activeCaption}</p>
+        <div
+          className="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center"
+          onClick={() => setActiveImage(null)}
+        >
+          <div className="flex flex-col items-center gap-4">
+            <img
+              src={activeImage}
+              alt={activeCaption || 'Full memory'}
+              className="max-w-[92vw] max-h-[82vh] rounded-2xl shadow-2xl"
+            />
+            {activeCaption && (
+              <p className="text-white/80 text-sm tracking-wide">{activeCaption}</p>
+            )}
+            <p className="text-white/60 text-xs">Click anywhere to close</p>
+          </div>
+        </div>
       )}
-      <p className="text-white/60 text-xs">Click anywhere to close</p>
-    </div>
-  </div>
-)}
     </div>
   );
 }
